@@ -37,8 +37,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         int location = i.getIntExtra("location", -1);
 
-        Log.i("map", ""+location);
-
+        //Log.i("map", ""+location);
     }
 
 
@@ -59,6 +58,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Sydney").snippet("In Australia"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        //setting up long click
+        mMap.setOnMapLongClickListener(this);
     }
 
     @Override
