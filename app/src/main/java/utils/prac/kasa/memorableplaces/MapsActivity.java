@@ -30,19 +30,19 @@ import java.util.List;
 import java.util.Locale;
 
 import android.Manifest;
-import android.view.View;
-
 
 //changed to AppCompatActivity because we need to use support library to use fragments and actionbar at the same time
 public class MapsActivity extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener, LocationListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
+    //for location based services
     private GoogleMap mMap;
     private int location;
     private LocationManager manager;
     private String provider;
-    private static final int FINE_LOCATION = 0;
 
+    //for permissions
+    private static final int FINE_LOCATION = 0;
     private static String[] PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION};
 
     @Override
