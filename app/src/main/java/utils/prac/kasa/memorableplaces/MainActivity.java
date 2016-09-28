@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(getApplicationContext(), MapsActivity.class);
                 i.putExtra("location", position);
+
+                //starting activity
+                startActivity(i);
             }
         });
 
